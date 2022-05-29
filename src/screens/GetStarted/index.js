@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 import React from 'react';
 import { IL_GetStarted_PNG } from '../../res/images/Illustrations';
 import { colors, fonts } from '../../res';
+import { Button, Gap } from '../../components';
 
 const GetStarted = () => {
   return (
@@ -11,9 +12,8 @@ const GetStarted = () => {
         <Text style={styles.textSlogan}>Shop Your Daily</Text>
         <Text style={styles.textSlogan}>Necessary</Text>
       </View>
-      <View style={{ backgroundColor: colors.primary, height: 50, width: 259, borderRadius: 20, justifyContent: 'center', alignSelf: 'center' }}>
-        <Text style={{ fontSize: 18, fontFamily: fonts.Medium, color: colors.white, textAlign: 'center' }}>Get Started</Text>
-      </View>
+      <Gap height={90} /> 
+      <Button />
     </View>
   )
 }
