@@ -4,7 +4,7 @@ import { IL_GetStarted_PNG } from '../../res/images/Illustrations';
 import { colors, fonts } from '../../res';
 import { Button, Gap } from '../../components';
 
-const GetStarted = () => {
+const GetStarted = ({ navigation }) => {
   return (
     <View style={styles.screen}>
       <Image source={IL_GetStarted_PNG} style={styles.image} />
@@ -12,8 +12,8 @@ const GetStarted = () => {
         <Text style={styles.textSlogan}>Shop Your Daily</Text>
         <Text style={styles.textSlogan}>Necessary</Text>
       </View>
-      <Gap height={90} /> 
-      <Button />
+      <Gap height={90} />
+      <Button onPress={() => navigation.replace('MainApp')} />
     </View>
   )
 }
