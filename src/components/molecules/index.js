@@ -1,3 +1,5 @@
 import BottomNavigator from './BottomNavigator';
 import Header from './Header';
-export { Header, BottomNavigator };
+import BoxItemCategories from './BoxItemCategories';
+import BoxItemTopProduct from './BoxItemTopProducts';
+export { Header, BottomNavigator, BoxItemCategories, BoxItemTopProduct };
