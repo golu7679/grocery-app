@@ -1,13 +1,14 @@
 import { StyleSheet } from 'react-native'
 import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { GetStarted, Home, Favorite, Notification, Profile } from '../screens';
-const Stack = createNativeStackNavigator();
-
-
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import BottomNavigator from '../components/molecules/BottomNavigator';
 
+import { GetStarted, Home, Favorite, Notification, Profile } from '../screens';
+import BottomNavigator from '../components/molecules/BottomNavigator';
+import Categories from '../screens/Categories';
+import Details from '../screens/Details';
+
+const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
 function MainApp() {
@@ -26,6 +27,8 @@ const Router = () => {
         <Stack.Navigator>
             <Stack.Screen name="GetStarted" component={GetStarted} options={{ headerShown: false }} />
             <Stack.Screen name="MainApp" component={MainApp} options={{ headerShown: false }} />
+            <Stack.Screen name="Categories" component={Categories} options={{ headerShown: false }} />
+            <Stack.Screen name="Details" component={Details} options={{ headerShown: false }} />
         </Stack.Navigator>
     )
 }

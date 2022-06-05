@@ -6,7 +6,7 @@ import { colors, fonts } from '../../res';
 import BoxItemCategories from '../../components/molecules/BoxItemCategories';
 import { BoxItemTopProduct, Gap } from '../../components';
 
-const Home = () => {
+const Home = ({ navigation }) => {
   const isDarkMode = useColorScheme() === 'dark';
   const dataTopProducts = [
     {
@@ -91,19 +91,29 @@ const Home = () => {
               <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.scrollViewCategories}>
                 <BoxItemCategories icon={<IC_Fruits />}
                   color="rgba(169,178,169,0.5)"
-                  text="Fruits" />
+                  text="Fruits"
+                  onPress={() => navigation.navigate('Categories', 'Fruits')}
+                />
                 <BoxItemCategories icon={<IC_Vegetables />}
                   color="rgba(233,255,210,0.5)"
-                  text="Fruits" />
+                  text="Vagetables"
+                  onPress={() => navigation.navigate('Categories', 'Vagetables')}
+                />
                 <BoxItemCategories icon={<IC_Drinks />}
                   color="rgba(140,175,53,0.5)"
-                  text="Fruits" />
+                  text="Drinks"
+                  onPress={() => navigation.navigate('Categories', 'Drinks')}
+                />
                 <BoxItemCategories icon={<IC_Bakery />}
                   color="rgba(214,255,218,0.5)"
-                  text="Fruits" />
+                  text="Bakery"
+                  onPress={() => navigation.navigate('Categories', 'Bakery')}
+                />
                 <BoxItemCategories icon={<IC_Bakery2 />}
                   color="rgba(255,250,204,0.5)"
-                  text="Fruits" />
+                  text="Bakery"
+                  onPress={() => navigation.navigate('Categories', 'Bakery')}
+                />
               </ScrollView>
             </View>
             {/* Category End */}
@@ -124,7 +134,9 @@ const Home = () => {
                       bgColor={item.bgColor}
                       icon={item.icons}
                       text={item.name}
-                      price={item.price} />
+                      price={item.price}
+                      onPress={() => navigation.navigate('Details', item)}
+                    />
                   )
                 })
               }

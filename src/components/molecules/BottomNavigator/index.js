@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
+import { StyleSheet, View, TouchableOpacity } from 'react-native'
 import { colors, IC_Favorite, IC_Favorite_color, IC_Home, IC_Home_color, IC_Notification_color, IC_Notification, IC_Profile, IC_Profile_color } from '../../../res'
 import React from 'react';
 
